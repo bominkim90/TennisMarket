@@ -1,21 +1,19 @@
+/* server.js 역할
+  서버 구동 함수
+*/
+
 
 let http = module.require('http'); // http 모듈
-let url = require('url'); // url 모듈
 
-function start(){
+
+function start(route, handler){
 
   function onRequest(request, response){
-    let pathname = url.parse(request.url).pathname; // 문자열 캐치
-    console.log("pathname : ",pathname);
-    if(pathname == '/favicon.ico') return;
-
-    response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-    response.write('Hello 김보민');
-    response.end();
+    route(request, response, handler);
   }
 
   http.createServer( onRequest ).listen(8888);
-  // localhost:8080
+  // localhost:8888
 }
 
 

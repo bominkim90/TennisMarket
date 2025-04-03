@@ -8,3 +8,12 @@
 ## 세부 목표
 1. node.js에서 각 js파일 모듈화 연습
 2. 데이터베이스(mariadb)에 테이블 구조 짜는법 익히기
+
+
+### Tennis(DB) -> (테이블)Product 설계구조
+CREATE TABLE product(
+  id INT,
+  name VARCHAR(30),
+  decscription VARCHAR(100),
+  price INT
+);
