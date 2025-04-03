@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title> Main </title>
     <link href="./css/main.css" rel="stylesheet">
+    <style>
+      * {padding: 0; margin: 0; box-sizing: border-box;}
+      h1 {text-align: center;}
+      .text-center {text-align: center; margin: 20px 0;}
+      .card-wrap {margin: 0 auto; width: 80%; text-align: center; font-size: 0;}
+      .card {display: inline-block; width: calc(100% / 3); padding: 20px; text-align: center; font-size: 16px;}
+      .card img {display: block; width: 100%;}
+      .card [type=button] {display: inline-block; padding: 10px 20px; background-color: #fff; border: 1px solid gray;}
+
+      table {margin: 0 auto; text-align: center;}
+    </style>
   </head>
   <body>
     <div class="text-center">
@@ -13,7 +24,7 @@
         Enjoy your shopping.
         <br>
         <br>
-        <a href="./orderlist.html">order list</a>
+        <a href="/orderlist">order list</a>
       </div>
     </div>
     
@@ -21,17 +32,17 @@
       <div class="card">
         <img class="card_img" src="./img/redRacket.png">
         <p class="card_title">Red Racket</p>
-        <input type="button" value="order" onclick="alert(1)">
+        <input type="button" value="order" onclick="location.href='/order?productId=1'; ">
       </div>
       <div class="card">
         <img class="card_img" src="./img/blueRacket.png">
         <p class="card_title">Blue Racket</p>
-        <input type="button" value="order" onclick="alert(2)">
+        <input type="button" value="order" onclick="location.href='/order?productId=2'; ">
       </div>
       <div class="card">
         <img class="card_img" src="./img/blackRacket.png">
         <p class="card_title">Black Racket</p>
-        <input type="button" value="order" onclick="alert(3)">
+        <input type="button" value="order" onclick="location.href='/order?productId=3'; ">
       </div>
     </div>
 

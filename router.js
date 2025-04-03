@@ -8,6 +8,7 @@ let url = require('url'); // url 모듈
 
 function route(request, response, handler){
   let pathname = url.parse(request.url).pathname;
+  let queryData = url.parse(request.url, true).query; // url?쿼리데이터 
   if(pathname == '/favicon.ico') return;
   
   console.log("pathname : ",pathname);
@@ -16,7 +17,7 @@ function route(request, response, handler){
     return;
   }
 
-  handler[pathname](response);
+  handler[pathname](response, queryData);
 }
 
 
