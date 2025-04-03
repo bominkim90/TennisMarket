@@ -18,6 +18,12 @@
     [Tennis > orderlist] INSERT orderlist VALUES( productId, new Date().toLocaleDateString() );
 ```
 
+### 사용한 프로그램
+1. vscode
+2. Node.js
+3. Docker : mariadb 설치 위해.
+4. mariadb : Docker 이용해서 설치.
+5. Git, GitHub
 
 
 ### 설치 필요한 외부 모듈
